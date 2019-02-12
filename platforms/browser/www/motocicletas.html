@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta name="description" content="Home">
+  <title>home</title>
+  <script src="js/init.js?v=1.0"></script>
+  <script>load_view('vistas/includes.html?v=1.1')</script>
+  <script src="js/motocicletas.js"></script>
+</head>
+<body>
+  <script>load_view('vistas/header.html')</script>
+  <section class="cid-r9fJjmv31O mbr-fullscreen" id="header15-9">
+
+    <div class="container align-right">
+      <div class="row">
+        <div class="mbr-white col-lg-8 col-md-7 content-container">
+          <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">¿QUÉ DESEAS BUSCAR?</h1>
+          <p class="mbr-text pb-3 mbr-fonts-style display-5">Completa todos los campos para una mejor búsqueda</p>
+        </div>
+        <div class="col-lg-4 col-md-5">
+          <div class="form-container">
+            <div class="media-container-column" data-form-type="formoid">
+
+              <form class="mbr-form" id="form-solicitud" action="#" method="post">
+
+                <div class="form-group">
+                  <select name="pais" class="form-control" required="required">
+                    <option value="">Seleccion el país de búsqueda</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <input type="text" name="marca" class="form-control" required="" placeholder="Escribe la marca">
+                </div>
+
+                <div class="form-group">
+                  <input type="text" name="modelo" class="form-control" required="" placeholder="Escribe el modelo">
+                </div>
+
+                <div class="form-group">
+                  <input type="number" class="form-control px-3" name="anio" required="" placeholder="Año">
+                </div>
+
+                <div class="form-group">
+                  <textarea type="text" class="form-control px-3" name="texto" required="" rows="7" placeholder="Repuesto que buscas"></textarea>
+                </div>
+                <span class="input-group-btn"><button type="submit" class="btn btn-secondary btn-form display-4">Enviar</button></span>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <input name="animation" type="hidden">
+  <script>
+   if (userget()) {
+    if (userget().id_taller>0) {
+      location.href="solicitudes.html";
+    }
+  }
+</script>
+<script>
+  $(document).ready(function() {
+    $.post(ws_url+'get_paises', {}, function(respuesta) {
+      for (var i = 0; i < respuesta.length; i++) {
+        $('[name="pais"]').append('<option value="'+respuesta[i].id_pais+'">'+respuesta[i].pais+'</option>');
+      }
+    });
+  });
+</script>
+</body>
+</html>

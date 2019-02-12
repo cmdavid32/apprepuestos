@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	<meta name="description" content="Pantalla de inicio">
+	<title>Index</title>
+	<script src="js/init.js"></script>
+	<script>load_view('vistas/includes.html?v=1.47')</script>
+	<style>
+	.btn-secondary-outline{
+		background: #fff;
+		color: #db0001;
+		border: none;
+	}
+	@media (max-width: 991px){
+		.cid-r8Sw8I3z8W img {
+			height: 4rem !important;
+		}
+	}
+</style>
+</head>
+<body>
+	<section class="menu cid-r8Sw8I3z8W" once="menu" id="menu2-0">
+		<nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top collapsed">
+			<div class="menu-logo">
+				<div class="navbar-brand">
+					<span class="navbar-logo">
+						<a href="home.html">
+							<img src="img/logo_rojo.png" alt="Logo" title="APPREPUESTOS" style="height: 6.4rem;">
+						</a>
+					</span>
+				</div>
+			</div>
+		</nav>
+	</section>
+
+	<section class="carousel slide cid-rc2xph7p3q" data-interval="false" id="slider1-3">
+
+
+
+		<div class="full-screen">
+			<div class="mbr-slider slide carousel" data-pause="true" data-keyboard="false" data-ride="false" data-interval="false">
+				<ol class="carousel-indicators">
+					<li data-app-prevent-settings="" data-target="#slider1-3" class=" active" data-slide-to="0"></li>
+				</ol>
+				<div class="carousel-inner" role="listbox">
+					<div class="carousel-item slider-fullscreen-image active" data-bg-video-slide="false" style="background-image: url(img/mbr-1920x1275.jpg);">
+						<div class="container container-slide">
+							<div class="image_wrapper">
+								<div class="mbr-overlay"></div>
+								<img src="img/mbr-1920x1275.jpg">
+								<div class="carousel-caption justify-content-center">
+									<div class="col-10 align-center">
+										<div class="mbr-section-btn align-center"><a class="btn btn-secondary display-4" href="login.html">INICIAR SESION</a>
+											<a class="btn btn-secondary-outline display-4" href="registro.html">CREAR CUENTA</a></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<input name="animation" type="hidden">
+	<script>
+		if (userget()) {
+			if (userget().id_taller>0) {
+				location.href="solicitudes.html";
+			}else{
+				location.href="home.html";
+			}
+		}
+	</script>
+	<script>
+		$(document).ready(function() {
+			h = $(this).height();
+			$('.cid-r8SyP2zPWE').height(h-280);
+
+		});
+	</script>
+</body>
+</html>

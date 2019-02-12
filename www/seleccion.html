@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	<meta name="description" content="Pantalla de inicio">
+	<title>Index</title>
+	<script src="js/init.js?v=1.0"></script>
+	<script>load_view('vistas/includes.html?v=1.2')</script>
+</head>
+<body>
+	<script>load_view('vistas/header.html?v=1.2')</script>
+	<section class="mbr-section contenedor-seleccion">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-6 col-sm-12 col-12 repuestos seleccion" data-modulo="home">
+				</div>
+				<div class="col-lg-6 col-sm-12 col-12 motocicletas seleccion" data-modulo="motocicletas">
+				</div>
+				<div class="col-lg-6 col-sm-12 col-12 talleres seleccion" data-modulo="#">
+				</div>
+				<div class="col-lg-6 col-sm-12 col-12 varios seleccion" data-modulo="varios">
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<input name="animation" type="hidden">
+	<script>
+
+		$(document).ready(function() {
+			$('.seleccion').click(function() {
+				if ($(this).data('modulo')=='#') {
+					return false;
+				}
+				location.href=$(this).data('modulo')+'.html';
+			});
+
+		});
+
+		if (userget()) {
+			if (userget().id_taller>0) {
+				location.href="solicitudes.html";
+			}else{
+
+			}
+		}
+	</script>
+
+
+</body>
+</html>

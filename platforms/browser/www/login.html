@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	<meta name="description" content="Inicio de sesion">
+	<title>Login</title>
+	<script src="js/init.js"></script>
+	<script>load_view('vistas/includes.html?v=3.5')</script>
+	<script src="js/login.js"></script>
+	<style>
+	@media (max-width: 991px){
+		.cid-r8Sw8I3z8W img {
+			height: 4rem !important;
+		}
+	}
+</style>
+</head>
+<body>
+	<div class="container-login-modal d-none" id="login-load">
+		<div class="modal-dialog" role="document">
+			<div class="container text-center">
+				<i class="fa fa-spinner fa-4x fa-spin" style="color:#fff;margin-top: 240px;"></i>
+			</div>
+		</div>
+	</div>
+	<section class="menu cid-r8Sw8I3z8W" once="menu" id="menu2-0">
+		<nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top collapsed">
+			<div class="menu-logo">
+				<div class="navbar-brand">
+					<span class="navbar-logo">
+						<a href="home.html">
+							<img src="img/logo_rojo.png" alt="Logo" title="APPREPUESTOS" style="height: 6.4rem;">
+						</a>
+					</span>
+				</div>
+			</div>
+		</nav>
+	</section>
+
+	<section class="mbr-section form1 cid-r8SzGbnEht" id="form1-5">
+
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="title col-12 col-lg-8">
+					<h3 class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-5">PARA UTILIZAR EL APP<br>DEBES INICIAR SESION</h3>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-4 col-md-5">
+					<div class="form-container">
+						<div class="media-container-column">
+							<div class="alerta-success d-none">
+								<div class="alert alert-form text-center"></div>
+							</div>
+							<form class="mbr-form" action="" method="post" id="login-form">
+								<div>
+									<div class="form-group">
+										<input type="text" class="form-control px-3" name="username" placeholder="Nombre de Usuario" required="">
+									</div>
+								</div>
+								<div>
+									<div class="form-group">
+										<input type="password" class="form-control px-3" name="pass" placeholder="Contraseña" required="">
+									</div>
+								</div>
+
+								<div>
+									<div class="form-group">
+										<input type="checkbox" name="taller"><span class="taller-check"> Ingresar como proveedor</span>
+									</div>
+								</div>
+
+
+								<span class="input-group-btn"><button href="" type="submit" class="btn btn-secondary btn-form display-4">Iniciar Sesión</button></span>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<input name="animation" type="hidden">
+	<script>
+		$(document).ready(function() {
+			h = $(this).height();
+			$('.cid-r8SzGbnEht').height(h-160);
+		});
+
+	</script>
+</body>
+</html>

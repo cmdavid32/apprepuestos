@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta name="description" content="Mensajes">
+  <title>mensajes</title>
+  <script src="js/init.js"></script>
+  <link rel="stylesheet" href="css/chat.css?v=1.1">
+  <script>load_view('vistas/includes.html?v=1.1')</script>
+  <script src="js/mensajes.js?v=1.4"></script>
+</head>
+<body>
+  <script>load_view('vistas/header.html?v=1.3')</script>
+  <div class="chat_window">
+    <div class="top_menu">
+      <div class="title" id="username">{{nombre_usuario}}</div>
+    </div>
+    <ul class="messages"></ul>
+    <div class="bottom_wrapper clearfix">
+      <div class="message_input_wrapper">
+        <input class="message_input" name="mensaje" placeholder="Escribir..." />
+      </div>
+      <div class="send_message">
+        <div class="icon"></div>
+        <div class="text" id="send_message">Enviar</div>
+      </div>
+    </div>
+  </div>
+  <div class="message_template">
+    <li class="message">
+      <div class="text_wrapper">
+        <div class="text"></div>
+      </div>
+    </li>
+  </div>
+  <input name="animation" type="hidden">
+  <input type="hidden" id="last_msj">
+  <input type="hidden" id="time" value="2000">
+</body>
+</html>
